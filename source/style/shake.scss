@@ -1,0 +1,13 @@
+.shake {
+  .giftbox {
+    animation:wobble 0.5s linear infinite forwards;
+  }
+}
+@keyframes wobble {
+  25%{
+    transform:rotate(4deg);
+  }
+  75%{
+    transform:rotate(-2deg);
+  }
+}

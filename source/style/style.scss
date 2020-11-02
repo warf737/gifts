@@ -1,0 +1,22 @@
+@import "shake";
+@import "gift-1";
+
+html, body, .container {
+  height: 100%;
+}
+body {
+  background: #e74c3c;
+  overflow: hidden;
+}
+
+.merrywrap {
+  position: absolute;
+  right: 40px;
+  left: 40px;
+  bottom: 40px;
+  top: 40px;
+}
+
+.giftbox {
+  position: absolute;
+}

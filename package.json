@@ -17,9 +17,9 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \\\\\\\\\\\\\\\"source/sass/**/*.scss\\\\\\\\\\\\\\\" --syntax source/style",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp css",
+    "build": "gulp source/css",
     "start": "gulp start"
   },
   "browserslist": [
