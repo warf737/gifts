@@ -1,7 +1,6 @@
 window.onload = function() {
   const merrywrap = document.getElementById("merrywrap");
   const boxes = merrywrap.querySelectorAll(".giftbox");
-  // const activeGift;
 
   const init = () => {
     boxes.forEach(function(box) {
