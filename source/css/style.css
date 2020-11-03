@@ -1,0 +1,123 @@
+.shake {
+  -webkit-animation: wobble 0.5s linear infinite forwards;
+          animation: wobble 0.5s linear infinite forwards; }
+
+@-webkit-keyframes wobble {
+  25% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg); }
+  75% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg); } }
+
+@keyframes wobble {
+  25% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg); }
+  75% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg); } }
+
+.gift-1 {
+  width: 348px;
+  height: 390px;
+  left: 50%;
+  bottom: 0;
+  z-index: 10; }
+
+.gift-2 {
+  width: 149px;
+  height: 114px;
+  left: 76%;
+  bottom: 0;
+  z-index: 12; }
+
+.gift-3 {
+  width: 289px;
+  height: 146px;
+  left: 62%;
+  bottom: 0;
+  z-index: 11; }
+
+.gift-4 {
+  width: 120px;
+  height: 69px;
+  left: 62.7%;
+  bottom: 32%;
+  z-index: 12; }
+
+.gift-5 {
+  width: 185px;
+  height: 149px;
+  left: 67%;
+  bottom: 16.4%;
+  z-index: 12; }
+
+.gift-6 {
+  width: 224px;
+  height: 216px;
+  left: 52%;
+  bottom: 32%;
+  z-index: 8; }
+
+.gift-7 {
+  width: 229px;
+  height: 201px;
+  left: 37.6%;
+  bottom: 0;
+  z-index: 10; }
+
+.gift-8 {
+  width: 188px;
+  height: 233px;
+  left: 42.6%;
+  bottom: 22.7%;
+  z-index: 9; }
+
+.gift-9 {
+  width: 191px;
+  height: 111px;
+  left: 37.5%;
+  bottom: 22.7%;
+  z-index: 9; }
+
+.gift-10 {
+  width: 144px;
+  height: 138px;
+  left: 31%;
+  bottom: 0%;
+  z-index: 10; }
+
+.gift-11 {
+  width: 189px;
+  height: 111px;
+  left: 28.7%;
+  bottom: 15.5%;
+  z-index: 10; }
+
+.gift-12 {
+  width: 278px;
+  height: 107px;
+  left: 48%;
+  bottom: 0;
+  z-index: 12; }
+
+html, body, .container {
+  height: 100%; }
+
+body {
+  background: #e74c3c;
+  overflow: hidden; }
+
+.merrywrap {
+  position: absolute;
+  right: 40px;
+  left: 40px;
+  bottom: 40px;
+  top: 40px; }
+
+.giftbox {
+  position: absolute;
+  margin-left: -150px; }
+
+/*# sourceMappingURL=style.css.map */
