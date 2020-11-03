@@ -3,11 +3,11 @@
 @import "gifts/gift-2";
 @import "gifts/gift-3";
 @import "gifts/gift-4";
-//@import "gifts/gift-5";
-//@import "gifts/gift-6";
-//@import "gifts/gift-7";
-//@import "gifts/gift-8";
-//@import "gifts/gift-9";
+@import "gifts/gift-5";
+@import "gifts/gift-6";
+@import "gifts/gift-7";
+@import "gifts/gift-8";
+@import "gifts/gift-9";
 //@import "gifts/gift-10";
 //@import "gifts/gift-11";
 //@import "gifts/gift-12";
@@ -30,4 +30,5 @@ body {
 
 .giftbox {
   position: absolute;
+  margin-left: -150px;
 }
