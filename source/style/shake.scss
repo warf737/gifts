@@ -1,7 +1,5 @@
 .shake {
-  .giftbox {
-    animation:wobble 0.5s linear infinite forwards;
-  }
+  animation:wobble 0.5s linear infinite forwards;
 }
 @keyframes wobble {
   25%{

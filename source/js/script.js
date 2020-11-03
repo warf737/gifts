@@ -1,27 +1,38 @@
 window.onload = function() {
   const merrywrap = document.getElementById("merrywrap");
   const boxes = merrywrap.querySelectorAll(".giftbox");
+  // const activeGift;
 
-  function init() {
-    console.log(typeof boxes);
+  const init = () => {
     boxes.forEach(function(box) {
-      box.addEventListener("mouseover", addShake);
-    });
-    // box.addEventListener("mouseover", addShake(box), false);
-  }
+      const activeAreas = box.querySelectorAll('.active-area');
+      activeAreas.forEach(function(area) {
+        area.addEventListener("mouseover", function(evt) {
+          addShake(evt, box);
+        });
+      });
 
-  const addShake = function (evt) {
-    const box = evt.target;
-    box.removeEventListener("mouseover", addShake);
-    merrywrap.className = 'merrywrap shake';
-    box.addEventListener("mouseout", removeShake);
+    });
   };
 
-  const removeShake = function (evt) {
-    const box = evt.target;
-    box.removeEventListener("mouseout", removeShake);
-    merrywrap.className = 'merrywrap';
-    box.addEventListener("mouseover", addShake);
+
+  const addShake = function (evt, box) {
+    const area = evt.target;
+    // console.log('1 area: ', area, 'box: ', 'box', box);
+    if (box) {box.classList.add("shake");}
+    area.removeEventListener("mouseover", addShake);
+    area.addEventListener("mouseout", function(){
+      removeShake(evt, box)
+    });
+  };
+
+  const removeShake = function (evt, box) {
+
+    const area = evt.target;
+    // console.log('2 area: ', area, 'box: ', 'box', box);
+    if(box) {box.classList.remove("shake");}
+    area.removeEventListener("mouseout", removeShake);
+    area.addEventListener("mouseover", addShake);
   };
 
   init();
