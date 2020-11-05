@@ -1,6 +1,6 @@
 .shake {
-  -webkit-animation: wobble 0.5s linear infinite forwards;
-          animation: wobble 0.5s linear infinite forwards; }
+  -webkit-animation: wobble 0.25s linear 1 forwards;
+          animation: wobble 0.25s linear 1 forwards; }
 
 @-webkit-keyframes wobble {
   25% {
@@ -17,6 +17,12 @@
   75% {
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg); } }
+
+.shadow {
+  -webkit-filter: drop-shadow(0 0 2rem white);
+          filter: drop-shadow(0 0 2rem white);
+  -webkit-transition: 0.25s linear;
+  transition: 0.25s linear; }
 
 .gift-1 {
   width: 348px;

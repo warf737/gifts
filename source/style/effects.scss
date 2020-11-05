@@ -1,0 +1,19 @@
+// shake //
+.shake {
+  animation:wobble 0.25s linear 1 forwards;
+}
+
+@keyframes wobble {
+  25%{
+    transform:rotate(4deg);
+  }
+  75%{
+    transform:rotate(-2deg);
+  }
+}
+
+// shadow //
+.shadow {
+  filter: drop-shadow(0 0 2rem white);
+  transition: 0.25s linear;
+}

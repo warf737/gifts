@@ -10,15 +10,13 @@ window.onload = function() {
           addShake(evt, box);
         });
       });
-
     });
   };
 
 
   const addShake = function (evt, box) {
     const area = evt.target;
-    // console.log('1 area: ', area, 'box: ', 'box', box);
-    if (box) {box.classList.add("shake");}
+    if (box) {box.classList.add("shake", "shadow");}
     area.removeEventListener("mouseover", addShake);
     area.addEventListener("mouseout", function(){
       removeShake(evt, box)
@@ -28,8 +26,7 @@ window.onload = function() {
   const removeShake = function (evt, box) {
 
     const area = evt.target;
-    // console.log('2 area: ', area, 'box: ', 'box', box);
-    if(box) {box.classList.remove("shake");}
+    if(box) {box.classList.remove("shake", "shadow");}
     area.removeEventListener("mouseout", removeShake);
     area.addEventListener("mouseover", addShake);
   };
