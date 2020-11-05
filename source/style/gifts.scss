@@ -4,6 +4,7 @@
   left:50%;
   bottom: 0;
   z-index:10;
+  pointer-events: none;
 
   .active-area {
     pointer-events: auto;
@@ -79,7 +80,7 @@
   width:144px;
   height:138px;
   left:31%;
-  bottom: 0%;
+  bottom: 0;
   z-index:10;
 }
 

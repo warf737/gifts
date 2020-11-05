@@ -29,7 +29,8 @@
   height: 390px;
   left: 50%;
   bottom: 0;
-  z-index: 10; }
+  z-index: 10;
+  pointer-events: none; }
   .gift-1 .active-area {
     pointer-events: auto; }
 
@@ -93,7 +94,7 @@
   width: 144px;
   height: 138px;
   left: 31%;
-  bottom: 0%;
+  bottom: 0;
   z-index: 10; }
 
 .gift-11 {
@@ -127,8 +128,5 @@ body {
 .giftbox {
   position: absolute;
   margin-left: -150px; }
-
-.test {
-  pointer-events: none; }
 
 /*# sourceMappingURL=style.css.map */
