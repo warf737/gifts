@@ -1,6 +1,8 @@
 window.onload = function() {
   const merrywrap = document.getElementById("merrywrap");
   const boxes = merrywrap.querySelectorAll(".giftbox");
+  const effect = ["shake", "shake-temp"];
+  let currentEffect = '';
 
   const init = () => {
     boxes.forEach(function(box) {
@@ -16,7 +18,11 @@ window.onload = function() {
 
   const addShake = function (evt, box) {
     const area = evt.target;
-    if (box) {box.classList.add("shake", "shadow");}
+    if (box) {
+      currentEffect = effect[Math.round(Math.random())];
+      console.log(currentEffect);
+      box.classList.add(`${currentEffect}`, "shadow");
+    }
     area.removeEventListener("mouseover", addShake);
     area.addEventListener("mouseout", function(){
       removeShake(evt, box)
@@ -26,7 +32,8 @@ window.onload = function() {
   const removeShake = function (evt, box) {
 
     const area = evt.target;
-    if(box) {box.classList.remove("shake", "shadow");}
+    if(box) {box.classList.remove(`${currentEffect}`, "shadow");}
+    // if(box) {box.classList.remove("shake");}
     area.removeEventListener("mouseout", removeShake);
     area.addEventListener("mouseover", addShake);
   };
