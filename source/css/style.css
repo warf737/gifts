@@ -1,19 +1,19 @@
 .shake {
-  -webkit-animation: wobble 0.25s linear infinite forwards;
-          animation: wobble 0.25s linear infinite forwards; }
+  -webkit-animation: wobble 0.4s linear infinite forwards;
+          animation: wobble 0.4s linear infinite forwards; }
 
 @-webkit-keyframes wobble {
   25% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg); }
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
   75% {
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg); } }
 
 @keyframes wobble {
   25% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg); }
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
   75% {
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg); } }
@@ -30,6 +30,8 @@
   left: 50%;
   bottom: 0;
   z-index: 10; }
+  .gift-1 .active-area {
+    pointer-events: auto; }
 
 .gift-2 {
   width: 149px;
@@ -125,5 +127,8 @@ body {
 .giftbox {
   position: absolute;
   margin-left: -150px; }
+
+.test {
+  pointer-events: none; }
 
 /*# sourceMappingURL=style.css.map */

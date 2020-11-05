@@ -1,11 +1,11 @@
 // shake //
 .shake {
-  animation:wobble 0.25s linear infinite forwards;
+  animation:wobble 0.4s linear infinite forwards;
 }
 
 @keyframes wobble {
   25%{
-    transform:rotate(4deg);
+    transform:rotate(3deg);
   }
   75%{
     transform:rotate(-2deg);

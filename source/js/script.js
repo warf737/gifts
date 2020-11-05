@@ -16,9 +16,7 @@ window.onload = function() {
 
   const addShake = function (evt, box) {
     const area = evt.target;
-    if (box) {
-      box.classList.add(`shake`, `shadow`);
-    }
+    if (box) { box.classList.add(`shake`, `shadow`); }
     area.removeEventListener(`mouseover`, addShake);
     area.addEventListener(`mouseout`, function(){
       removeShake(evt, box)
@@ -26,10 +24,8 @@ window.onload = function() {
   };
 
   const removeShake = function (evt, box) {
-
     const area = evt.target;
-    if(box) {box.classList.remove(`shake`, `shadow`);}
-    // if(box) {box.classList.remove("shake");}
+    if(box) { box.classList.remove(`shake`, `shadow`); }
     area.removeEventListener(`mouseout`, removeShake);
     area.addEventListener(`mouseover`, addShake);
   };

@@ -4,7 +4,12 @@
   left:50%;
   bottom: 0;
   z-index:10;
+
+  .active-area {
+    pointer-events: auto;
+  }
 }
+
 
 .gift-2 {
   width:149px;
