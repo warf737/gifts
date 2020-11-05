@@ -2,10 +2,6 @@
   -webkit-animation: wobble 0.25s linear infinite forwards;
           animation: wobble 0.25s linear infinite forwards; }
 
-.shake-temp {
-  -webkit-animation: wobble 0.25s linear 1 forwards;
-          animation: wobble 0.25s linear 1 forwards; }
-
 @-webkit-keyframes wobble {
   25% {
     -webkit-transform: rotate(4deg);

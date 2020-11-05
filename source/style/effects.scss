@@ -3,10 +3,6 @@
   animation:wobble 0.25s linear infinite forwards;
 }
 
-.shake-temp {
-  animation:wobble 0.25s linear 1 forwards;
-}
-
 @keyframes wobble {
   25%{
     transform:rotate(4deg);

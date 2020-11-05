@@ -1,14 +1,12 @@
 window.onload = function() {
-  const merrywrap = document.getElementById("merrywrap");
-  const boxes = merrywrap.querySelectorAll(".giftbox");
-  const effect = ["shake", "shake-temp"];
-  let currentEffect = '';
+  const merrywrap = document.getElementById(`merrywrap`);
+  const boxes = merrywrap.querySelectorAll(`.giftbox`);
 
   const init = () => {
     boxes.forEach(function(box) {
-      const activeAreas = box.querySelectorAll('.active-area');
+      const activeAreas = box.querySelectorAll(`.active-area`);
       activeAreas.forEach(function(area) {
-        area.addEventListener("mouseover", function(evt) {
+        area.addEventListener(`mouseover`, function(evt) {
           addShake(evt, box);
         });
       });
@@ -19,12 +17,10 @@ window.onload = function() {
   const addShake = function (evt, box) {
     const area = evt.target;
     if (box) {
-      currentEffect = effect[Math.round(Math.random())];
-      console.log(currentEffect);
-      box.classList.add(`${currentEffect}`, "shadow");
+      box.classList.add(`shake`, `shadow`);
     }
-    area.removeEventListener("mouseover", addShake);
-    area.addEventListener("mouseout", function(){
+    area.removeEventListener(`mouseover`, addShake);
+    area.addEventListener(`mouseout`, function(){
       removeShake(evt, box)
     });
   };
@@ -32,10 +28,10 @@ window.onload = function() {
   const removeShake = function (evt, box) {
 
     const area = evt.target;
-    if(box) {box.classList.remove(`${currentEffect}`, "shadow");}
+    if(box) {box.classList.remove(`shake`, `shadow`);}
     // if(box) {box.classList.remove("shake");}
-    area.removeEventListener("mouseout", removeShake);
-    area.addEventListener("mouseover", addShake);
+    area.removeEventListener(`mouseout`, removeShake);
+    area.addEventListener(`mouseover`, addShake);
   };
 
   init();
