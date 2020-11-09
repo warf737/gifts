@@ -1,8 +1,10 @@
+@import "variables";
 @import "effects";
 @import "gifts";
 
-html, body, .container {
-  height: 100%;
+html, body {
+  height: 1080px;
+  width: 1920px;
 }
 body {
   background: #e74c3c;

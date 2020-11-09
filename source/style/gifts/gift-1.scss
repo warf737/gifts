@@ -1,0 +1,33 @@
+.gift-1 {
+  width:348px;
+  height:390px;
+  z-index:10;
+  pointer-events: none;
+
+  left:39vw;
+  bottom: 0;
+
+  .active-area {
+    pointer-events: auto;
+  }
+
+  //@media #{$mobile-small} {
+  //  left:70vw;
+  //}
+  //
+  //@media #{$tablet} {
+  //  left:75vw;
+  //}
+  //
+  //@media #{$notebook} {
+  //  left:60vw;
+  //}
+  //
+  //@media #{$desktop} {
+  //  left:35vw;
+  //}
+  //
+  //@media #{$retina3x} {
+  //  left:50vw;
+  //}
+}

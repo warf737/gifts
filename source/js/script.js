@@ -3,6 +3,7 @@ window.onload = function() {
   const boxes = merrywrap.querySelectorAll(`.giftbox`);
 
   const init = () => {
+    // alert(`${document.documentElement.clientWidth}x${document.documentElement.clientHeight}`);
     boxes.forEach(function(box) {
       const activeAreas = box.querySelectorAll(`.active-area`);
       activeAreas.forEach(function(area) {
