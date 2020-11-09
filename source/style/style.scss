@@ -21,4 +21,8 @@ body {
 
 .giftbox {
    position: absolute;
+
+  &.path {
+    background-color: yellow;
+  }
 }

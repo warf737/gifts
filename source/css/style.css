@@ -162,5 +162,7 @@ body {
 
 .giftbox {
   position: absolute; }
+  .giftbox.path {
+    background-color: yellow; }
 
 /*# sourceMappingURL=style.css.map */
