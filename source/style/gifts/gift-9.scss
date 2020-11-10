@@ -1,8 +1,16 @@
 .gift-9 {
-  width:191px;
-  height:111px;
+  $height: 111px;
+  $width: 191px;
+
+  height: $height;
+  width: $width;
   z-index:10;
 
   left:26.7vw;
   bottom: 20.7vh;
+
+  &.opened {
+    margin-bottom: -#{$height/2};
+    margin-left: -#{$width/2};
+  }
 }

@@ -1,8 +1,16 @@
 .gift-10 {
-  width:144px;
-  height:138px;
+  $height: 138px;
+  $width: 144px;
+
+  height:$height;
+  width:$width;
   z-index:10;
 
   left:20vw;
   bottom: 0;
+
+  &.opened {
+    margin-bottom: -#{$height/2};
+    margin-left: -#{$width/2};
+  }
 }

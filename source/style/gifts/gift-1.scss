@@ -1,6 +1,9 @@
 .gift-1 {
-  width:348px;
-  height:390px;
+  $height: 390px;
+  $width: 348px;
+
+  height: $height;
+  width: $width;
   z-index:10;
   pointer-events: none;
 
@@ -10,24 +13,8 @@
   .active-area {
     pointer-events: auto;
   }
-
-  //@media #{$mobile-small} {
-  //  left:70vw;
-  //}
-  //
-  //@media #{$tablet} {
-  //  left:75vw;
-  //}
-  //
-  //@media #{$notebook} {
-  //  left:60vw;
-  //}
-  //
-  //@media #{$desktop} {
-  //  left:35vw;
-  //}
-  //
-  //@media #{$retina3x} {
-  //  left:50vw;
-  //}
+  &.opened {
+    margin-bottom: -#{$height/2};
+    margin-left: -#{$width/2};
+  }
 }

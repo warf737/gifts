@@ -1,38 +1,16 @@
 .gift-2 {
-  width:110px;
-  height:69px;
+  $height: 69px;
+  $width: 110px;
+
+  height:$height;
+  width:$width;
   z-index:9;
 
   left: 51.7vw;
   bottom: 29vh;
 
-  //@media #{$mobile-small} {
-  //  bottom: 13.2%;
-  //  left:100%;
-  //}
-  ////
-  //@media #{$tablet} {
-  //  bottom: 20.7%;
-  //  left:96vw;
-  //}
-  //
-  //@media #{$notebook} {
-  //  bottom: 27%;
-  //  left:77vw;
-  //}
-  //
-  //@media #{$desktop} {
-  //  bottom: 30.3%;
-  //  left:51.5%;
-  //}
-  //
-  //@media #{$desktop-full-hd} {
-  //  bottom: 30.3%;
-  //  left:51.5%;
-  //}
-  //
-  //@media #{$retina3x} {
-  //  bottom: 36%;
-  //  left:35%;
-  //}
+  &.opened{
+    margin-bottom: -#{$height/2};
+    margin-left: -#{$width/2};
+  }
 }

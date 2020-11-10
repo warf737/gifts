@@ -1,7 +1,8 @@
 window.onload = function() {
-  const merrywrap = document.getElementById(`merrywrap`);
+  const merrywrap = document.querySelector(`#merrywrap`);
   const boxes = merrywrap.querySelectorAll(`.giftbox`);
-  let activeBox;
+  const overlay = document.querySelector(`#overlay`);
+  let activeBox = null;
 
   /**
    * Добавляем каждой коробке обработчик события наведения курсора
@@ -11,15 +12,17 @@ window.onload = function() {
   const init = () => {
     boxes.forEach((box) => {
       box.addEventListener(`mouseover`, function _handler() {
-          console.log(activeBox);
-          console.log('2');
+
+        if(!activeBox || box !== activeBox) {
           activeBox = box;
-          addShake(box);
+          box.addEventListener(`click`, function _listener() {
+            openBox(box);
+            box.removeEventListener(`click`, _listener, false);
+            box.removeEventListener(`mouseover`, _handler, true);
+          }, true);
+        }
 
-        box.addEventListener(`click`, function() {
-          openBox(box)
-        }, true);
-
+        addShake(box);
       },true);
 
     });
@@ -27,44 +30,37 @@ window.onload = function() {
 
   /**
    * Добавляет классы, отвечающие за визуальное отображение коробки на короторой находится курсор
-   * @param evt
    * @param box
    */
   const addShake = (box) => {
     if (box) {
-      // box.classList.add(`shake`, `shadow`, `scaled`);
-      box.classList.add(`shadow`);
+      box.classList.add(`shake`, `shadow`, `scaled`);
       box.addEventListener(`mouseout`, () => {
         removeShake(box)
       });
-      // box.addEventListener(`click`, function(evt) {
-      //   openBox(evt, box);
-      // })
     };
   };
 
   /**
    * Убирает классы, отвечающие за визуальное отображение коробки на короторой находится курсор
-   * @param evt
    * @param box
    */
   const removeShake = (box) => {
     if (box) {
-      // activeBox = '';
       box.classList.remove(`shake`, `shadow`, `scaled`);
-      // box.removeEventListener(`click`, openBox);
     }
   };
 
   /**
    * Добавляет классы, отвечающие за события при открытии коробки
-   * @param evt
    * @param box
    */
   const openBox = (box) => {
-    // box.removeEventListener(`click`, openBox);
-    console.log('event: ', box);
-    // console.log('opened a box ', box);
+    box.removeEventListener(`click`, openBox);
+    removeShake(box);
+    box.classList.add(`opened`);
+    overlay.classList.add(`overlay`);
+    console.log('click');
   };
 
   init();
