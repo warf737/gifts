@@ -32,24 +32,24 @@
     margin-left: -144.5px; }
 
 .gift-4 {
-  width: 149px;
   height: 114px;
+  width: 149px;
   z-index: 12;
   left: 65vw;
   bottom: 0; }
   .gift-4.opened {
-    margin-bottom: -74.5px;
-    margin-left: -57px; }
+    margin-bottom: -57px;
+    margin-left: -74.5px; }
 
 .gift-5 {
-  width: 185px;
   height: 149px;
+  width: 185px;
   z-index: 10;
   left: 56vw;
   bottom: 15.1vh; }
   .gift-5.opened {
-    margin-bottom: -92.5px;
-    margin-left: -74.5px; }
+    margin-bottom: -74.5px;
+    margin-left: -92.5px; }
 
 .gift-6 {
   height: 216px;
@@ -94,7 +94,7 @@
 .gift-10 {
   height: 138px;
   width: 144px;
-  z-index: 10;
+  z-index: 12;
   left: 20vw;
   bottom: 0; }
   .gift-10.opened {
@@ -112,13 +112,13 @@
     margin-left: -94.5px; }
 
 .gift-12 {
-  height: 107px;
+  height: 113px;
   width: 278px;
   z-index: 12;
   left: 38vw;
   bottom: 0; }
   .gift-12.opened {
-    margin-bottom: -53.5px;
+    margin-bottom: -56.5px;
     margin-left: -139px; }
 
 .shadow {

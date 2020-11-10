@@ -1,9 +1,9 @@
 .gift-5 {
-  $height: 185px;
-  $width: 149px;
+  $height: 149px;
+  $width: 185px;
 
-  width:185px;
-  height:149px;
+  height:$height;
+  width:$width;
   z-index:10;
 
   left:56vw;
