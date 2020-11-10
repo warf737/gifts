@@ -2,6 +2,7 @@ window.onload = function() {
   const merrywrap = document.querySelector(`#merrywrap`);
   const boxes = merrywrap.querySelectorAll(`.giftbox`);
   const overlay = document.querySelector(`#overlay`);
+  const openingGiftWrap = merrywrap.querySelector(`#opening-wrap`);
   let activeBox = null;
 
   /**
@@ -60,6 +61,8 @@ window.onload = function() {
     removeShake(box);
     box.classList.add(`opened`);
     overlay.classList.add(`overlay`);
+    openingGiftWrap.classList.remove(`visually-hidden`);
+
     console.log('click');
   };
 

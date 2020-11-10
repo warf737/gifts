@@ -35,18 +35,34 @@
   transition: all 1s linear;
 }
 
+.opening-wrap {
+  z-index: 52;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 600px;
+  height: 600px;
+  margin-bottom: -300px;
+  margin-left: -300px;
+  border-radius: 50%;
+  background-color: white;
+  animation: emergence 2s linear;
+}
+
 @keyframes emergence {
   from {
     width: 10px;
     height: 10px;
     margin-left: -5px;
-    margin-top: -5px;
+    margin-bottom: -5px;
     opacity: 0;
   }
   to {
     width: 600px;
     height: 600px;
-    margin-top: -300px;
+    margin-bottom: -300px;
     margin-left: -300px;
     opacity: 1;
   }
