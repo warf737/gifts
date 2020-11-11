@@ -13,7 +13,7 @@
   .active-area {
     pointer-events: auto;
   }
-  &.opened {
+  &.selected {
     margin-bottom: -#{$height/2};
     margin-left: -#{$width/2};
   }

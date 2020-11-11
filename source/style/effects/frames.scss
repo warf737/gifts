@@ -1,12 +1,3 @@
-.shadow {
-  filter: drop-shadow(0 0 2rem white);
-  transition: 0.25s linear;
-}
-
-.shake {
-  animation:wobble 0.8s linear 1 forwards;
-}
-
 @keyframes wobble {
   0% {
     transform: scale(1); z-index: 100;
@@ -27,34 +18,10 @@
     transform: scale(1);
   }
 }
-
-.opened {
-  bottom: 50%;
-  left: 50%;
-  z-index: 55;
-  transition: all 1s linear;
-}
-
-.opening-wrap {
-  z-index: 52;
-  content: '';
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  width: 600px;
-  height: 600px;
-  margin-bottom: -300px;
-  margin-left: -300px;
-  border-radius: 50%;
-  background-color: white;
-  animation: emergence 2s linear;
-}
-
 @keyframes emergence {
   from {
-    width: 10px;
-    height: 10px;
+    width: 1px;
+    height: 1px;
     margin-left: -5px;
     margin-bottom: -5px;
     opacity: 0;
@@ -65,5 +32,24 @@
     margin-bottom: -300px;
     margin-left: -300px;
     opacity: 1;
+  }
+}
+
+@keyframes flyUp{
+  75%{
+    opacity:1;
+  }
+  100%{
+    transform:translateY(-1000px) rotate(20deg);
+    opacity:0;
+  }
+}
+@keyframes flyDown{
+  75%{
+    opacity:1;
+  }
+  100%{
+    transform:translateY(100%);
+    opacity:0;
   }
 }

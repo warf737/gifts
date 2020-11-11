@@ -11,14 +11,15 @@ window.onload = function() {
    * обработчик события ухода курсора с этой коробки
    */
   const init = () => {
+    console.log(boxes);
     boxes.forEach((box) => {
       box.addEventListener(`mouseover`, function _handler() {
 
         if(!activeBox || box !== activeBox) {
           activeBox = box;
           box.addEventListener(`click`, function _listener() {
-            openBox(box);
-            box.removeEventListener(`click`, _listener, false);
+            selectBox(box);
+            box.removeEventListener(`click`, _listener, true);
             box.removeEventListener(`mouseover`, _handler, true);
           }, true);
         }
@@ -39,7 +40,7 @@ window.onload = function() {
       box.addEventListener(`mouseout`, () => {
         removeShake(box)
       });
-    };
+    }
   };
 
   /**
@@ -53,17 +54,23 @@ window.onload = function() {
   };
 
   /**
-   * Добавляет классы, отвечающие за события при открытии коробки
+   * Добавляет классы, отвечающие за события при выборе коробки для открытия
    * @param box
    */
-  const openBox = (box) => {
-    box.removeEventListener(`click`, openBox);
+  const selectBox = (box) => {
     removeShake(box);
-    box.classList.add(`opened`);
+    box.classList.add(`selected`);
     overlay.classList.add(`overlay`);
-    openingGiftWrap.classList.remove(`visually-hidden`);
+    openingGiftWrap.classList.add(`opening-wrap`);
 
-    console.log('click');
+    box.addEventListener(`click`, function _handler() {
+      openBox(box);
+      box.removeEventListener(`click`, _handler, true);
+    }, true);
+  };
+
+  const openBox = (box) => {
+    console.log('open box', box);
   };
 
   init();

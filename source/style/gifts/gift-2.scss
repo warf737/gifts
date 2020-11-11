@@ -9,7 +9,7 @@
   left: 51.7vw;
   bottom: 29vh;
 
-  &.opened{
+  &.selected{
     margin-bottom: -#{$height/2};
     margin-left: -#{$width/2};
   }
