@@ -4,6 +4,8 @@ window.onload = function() {
   const overlay = document.querySelector(`#overlay`);
   const openingGiftWrap = merrywrap.querySelector(`#opening-wrap`);
   let activeBox = null;
+  let step=1;
+  const STEP_MINUTES=[1000,2000,1000,1000];
 
   /**
    * Добавляем каждой коробке обработчик события наведения курсора
@@ -11,7 +13,6 @@ window.onload = function() {
    * обработчик события ухода курсора с этой коробки
    */
   const init = () => {
-    console.log(boxes);
     boxes.forEach((box) => {
       box.addEventListener(`mouseover`, function _handler() {
 
@@ -70,7 +71,19 @@ window.onload = function() {
   };
 
   const openBox = (box) => {
-    console.log('open box', box);
+    // console.log(`open box`, box);
+    box.classList.add(`step-10`);
+    stepClass(box, 1);
+  };
+
+  const stepClass = (box, step) => {
+    console.log('1', box.classList);
+    box.classList.remove(function(css) {
+      return (css.match(/step-../g) || []).join('');
+    });
+    console.log('2', box.classList);
+    // box.className='merrywrap';
+    // box.className='merrywrap step-'+step;
   };
 
   init();
