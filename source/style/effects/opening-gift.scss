@@ -1,32 +1,28 @@
-.opening--step-1{
-  .giftbox{
-    animation:wobble 0.5s linear infinite forwards;
-  }
-  .cover{
-    animation:wobble 0.5s linear infinite  0.1s forwards;
-  }
-  .icons .row span{
-    opacity:1;
-  }
-}
-.opening--step-2 .giftbox:after{
-  opacity:0;
-}
-.opening--step-3 .giftbox,
-.opening--step-4 .giftbox{
-  opacity: 0;
-  z-index:1;
-  &:after{
-    opacity:0;
-  }
-}
-.opening--step-2{
-  .giftbox{
-    .cover{
-      animation:flyUp 0.4s ease-in forwards;
+.step-1 {
+  .selected.giftbox {
+      animation: wobble-2 0.5s linear infinite;
+
+    .cover {
+      animation:cap-up 0.5s linear infinite  0.1s
     }
-    .box{
-      animation:flyDown 0.2s ease-in 0.05s forwards;
+  }
+}
+.step-2 {
+  .selected.giftbox:after {
+    opacity: 0;
+  }
+}
+.step-3 .selected.giftbox,
+.step-4 .selected.giftox {
+  display: none;
+}
+.step-2{
+  .selected.giftbox{
+    .cover {
+      animation:flyUp 1s ease-in forwards;
+    }
+    .box {
+      animation:flyDown 1s ease-in 0.5s forwards;
     }
   }
 }
