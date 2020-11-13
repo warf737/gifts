@@ -14,12 +14,10 @@
   left: 50%;
   z-index: 55;
   overflow: visible;
-  //transition: all 1.5s linear;
   transition: all 1.2s ease-out;
 }
 
 .opening-wrap {
-  //opacity: .5;
   z-index: 52;
   content: '';
   display: inline-block;

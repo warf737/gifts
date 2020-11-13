@@ -2,11 +2,12 @@ window.confetti = (function() {
   const HALF_PI = Math.PI * 0.5;
 
 // canvas settings
+  const CONFETTI_NUMBER  = 500;
   const drawingCanvas = document.querySelector("#drawing_canvas");
   const viewWidth = drawingCanvas.offsetWidth;
   const viewHeight = drawingCanvas.offsetHeight;
-  console.log(`${drawingCanvas.offsetWidth} x ${drawingCanvas.offsetHeight}`);
   const timeStep = (1 / 60);
+
   let ctx;
 
 
@@ -33,11 +34,11 @@ window.confetti = (function() {
     update: function () {
       this.time = Math.min(this.duration, this.time + timeStep);
 
-      var f = Ease.outCubic(this.time, 0, 1, this.duration);
-      var p = cubeBezier(this.p0, this.p1, this.p2, this.p3, f);
+      const f = Ease.outCubic(this.time, 0, 1, this.duration);
+      const p = cubeBezier(this.p0, this.p1, this.p2, this.p3, f);
 
-      var dx = p.x - this.x;
-      var dy = p.y - this.y;
+      const dx = p.x - this.x;
+      const dy = p.y - this.y;
 
       this.r = Math.atan2(dy, dx) + HALF_PI;
       this.sy = Math.sin(Math.PI * f * 10);
@@ -68,7 +69,7 @@ window.confetti = (function() {
   };
 
   const createParticles = () => {
-    for (let i = 0; i < 128; i++) {
+    for (let i = 0; i < CONFETTI_NUMBER; i++) {
       const p0 = new Point(viewWidth * 0.5, viewHeight * 0.5);
       const p1 = new Point(Math.random() * viewWidth, Math.random() * viewHeight);
       const p2 = new Point(Math.random() * viewWidth, Math.random() * viewHeight);

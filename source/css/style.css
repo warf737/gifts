@@ -308,16 +308,16 @@
     opacity: 1; }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%); } }
+    -webkit-transform: translateY(250%);
+            transform: translateY(250%); } }
 
 @keyframes flyDown {
   75% {
     opacity: 1; }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%); } }
+    -webkit-transform: translateY(250%);
+            transform: translateY(250%); } }
 
 body {
   background: #009B77;
