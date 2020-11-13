@@ -5,7 +5,7 @@ window.onload = function() {
   const openingGiftWrap = merrywrap.querySelector(`#opening-wrap`);
   let activeBox = null;
   let step = 1;
-  const STEP_MINUTES = [1000,2000,1000,1000];
+  const STEP_MINUTES = [1000,2000];
 
   /**
    * Добавляем каждой коробке обработчик события наведения курсора
@@ -65,7 +65,7 @@ window.onload = function() {
     openingGiftWrap.classList.add(`opening-wrap`);
 
     box.addEventListener(`click`, function _handler() {
-      openBox(box);
+      openBox();
       box.removeEventListener(`click`, _handler, true);
     }, true);
   };
@@ -73,9 +73,13 @@ window.onload = function() {
 
   const openBox = () => {
     setStepClass();
+    console.log(STEP_MINUTES[step - 1]);
     if(step < 3) {
       setTimeout(openBox, STEP_MINUTES[step-1]);
       step++;
+    } else {
+      console.log('step', step);
+      window.confetti.onload();
     }
   };
 

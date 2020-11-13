@@ -19,6 +19,7 @@
 }
 
 .opening-wrap {
+  //opacity: .5;
   z-index: 52;
   content: '';
   display: inline-block;
@@ -32,5 +33,4 @@
   border-radius: 50%;
   background-color: white;
   animation: emergence 1.2s ease-in;
-  //animation: emergence .5s ease-out;
 }
